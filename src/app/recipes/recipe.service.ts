@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import {Recipe} from "./recipe";
+import {Ingredient} from "../shared/ingredient";
 
 @Injectable()
 export class RecipeService {
@@ -9,7 +10,10 @@ export class RecipeService {
       'Schnitzel',
       'Very tasty',
       'http://www.daringgourmet.com/wp-content/uploads/2014/03/Schnitzel-5.jpg',
-      []),
+      [
+        new Ingredient('French Frize', 2),
+        new Ingredient('Pork Meat', 1)
+      ]),
     new Recipe(
       'Summer Salad',
       'Okayish',
