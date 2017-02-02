@@ -3,7 +3,7 @@ import {Subscription} from "rxjs";
 
 import {Recipe} from "../recipe";
 import {ShoppingListService} from "../../shopping-list/shopping-list.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {RecipeService} from "../recipe.service";
 
 @Component({
@@ -17,7 +17,8 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
 
   constructor(private sls: ShoppingListService,
               private route: ActivatedRoute,
-              private recipeService: RecipeService) {
+              private recipeService: RecipeService,
+              private router: Router) {
 
   }
 
@@ -28,6 +29,15 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
         this.selectedRecipe = this.recipeService.getRecipe(this.recipeIndex);
       }
     );
+  }
+
+  onEdit() {
+    this.router.navigate(['/recipes', this.recipeIndex, 'edit']);
+  }
+
+  onDelete() {
+    this.recipeService.deleteRecipe(this.selectedRecipe);
+    this.router.navigate(['/recipes']);
   }
 
   onAddToShoppingList() {
