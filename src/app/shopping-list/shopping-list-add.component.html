@@ -38,12 +38,14 @@
           </button>
           <button class="btn btn-danger"
                   type="button"
-                  *ngIf="!isAdd">
+                  *ngIf="!isAdd"
+                  (click)="onDelete()">
             Delete Item
           </button>
           <button class="btn btn-primary"
                   type="button"
-                  *ngIf="!isAdd">
+                  *ngIf="!isAdd"
+                  (click)="onClear()">
             Clear
           </button>
         </div>
