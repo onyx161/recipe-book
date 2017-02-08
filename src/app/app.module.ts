@@ -38,7 +38,8 @@ import { RecipeStartComponent } from './recipes/recipe-start.component';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
-    routing
+    routing,
+    HttpModule
   ],
   providers: [
     RecipeService,
