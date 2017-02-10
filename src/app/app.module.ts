@@ -9,7 +9,6 @@ import { DropdownDirective } from './dropdown.directive';
 import {RecipeService} from "./recipes/recipe.service";
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import {routing} from "./app.routing";
-import {ShoppingListModule} from "./shopping-list/shopping-list.module";
 import { HomeComponent } from './home.component';
 
 @NgModule({
@@ -23,8 +22,7 @@ import { HomeComponent } from './home.component';
     BrowserModule,
     FormsModule,
     routing,
-    HttpModule,
-    ShoppingListModule
+    HttpModule
   ],
   providers: [
     RecipeService,
