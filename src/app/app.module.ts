@@ -10,21 +10,21 @@ import {RecipeService} from "./recipes/recipe.service";
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import {routing} from "./app.routing";
 import {ShoppingListModule} from "./shopping-list/shopping-list.module";
-import {RecipesModule} from "./recipes/recipes.module";
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DropdownDirective
+    DropdownDirective,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
     HttpModule,
-    ShoppingListModule,
-    RecipesModule
+    ShoppingListModule
   ],
   providers: [
     RecipeService,
